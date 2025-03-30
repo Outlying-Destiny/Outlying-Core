@@ -1,0 +1,59 @@
+// All jar files from this folder will be added automatically as runtime mod dependencies
+def extraModsDir = "extra-mods"
+def extraAPIDir = "extra-api"
+
+repositories {
+    // Put repositories for dependencies here
+    // ForgeGradle automatically adds the Forge maven and Maven Central for you
+
+    // If you have mod jar dependencies in ./libs, you can declare them as a repository like so:
+    // flatDir {
+    //     dir 'libs'
+    // }
+
+    flatDir {
+        name "extra-mods"
+        dir file(extraModsDir)
+    }
+
+    flatDir {
+        name "extra-api"
+        dir file(extraAPIDir)
+    }
+
+    maven { // EnderIO
+        url "https://maven.rover656.dev/releases"
+        content {
+            includeGroup "com.enderio"
+        }
+    }
+
+    maven { // Registrate - required by EnderIO
+        url "https://maven.tterrag.com"
+        content {
+            includeGroup "com.tterrag.registrate"
+        }
+    }
+
+    maven { // GraphLib - required by EnderIO
+        url "https://dogforce-games.com/maven"
+        content {
+            includeGroup "dev.gigaherz.graph"
+        }
+    }
+
+    maven { // IronJetpacks & Cucumber
+        url "https://maven.blakesmods.com/releases"
+        content {
+        	includeGroup "com.blakebr0.ironjetpacks"
+            includeGroup "com.blakebr0.cucumber"
+        }
+    }
+
+    maven { // JEI - used for testing
+        url "https://maven.blamejared.com"
+        content {
+            includeGroup "mezz.jei"
+        }
+    }
+}

@@ -1,0 +1,34 @@
+# eclipse
+bin
+.eclipse
+*.launch
+.settings
+.metadata
+.classpath
+.factorypath
+.project
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+
+# gradle
+src/generated/resources/.cache
+build
+.gradle
+
+# other
+eclipse
+run
+
+# Files from Forge MDK
+forge*changelog.txt
+server
+Minecraft
+changelog.txt
+CREDITS.txt
+/.apt_generated/
+/.apt_generated_tests/

@@ -1,0 +1,18 @@
+name: Feature Request
+description: Suggest a new feature to be added to the mod
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Describe the feature you'd like to see added
+      description: A detailed explanation of the suggestion
+    validations:
+      required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional information
+      description: Add any other context about the feature here
+    validations:
+      required: false
