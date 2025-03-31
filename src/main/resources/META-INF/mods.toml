@@ -28,14 +28,14 @@ description="${mod_description}"
 
 [[dependencies.outlyingcore]]
     modId="enderio"
-    mandatory=true
+    mandatory=false
     versionRange="${enderio_version_range}"
     ordering="AFTER"
     side="BOTH"
 
 [[dependencies.outlyingcore]]
     modId="ironjetpacks"
-    mandatory=true
+    mandatory=false
     versionRange="${ironjetpacks_version_range}"
     ordering="AFTER"
     side="BOTH"
