@@ -8,12 +8,17 @@
   ],
   "mixins": [
     "enderio.capacitor.DefaultCapacitorDataMixin",
+    "enderio.machine.AlloySmelterBlockEntityMixin",
     "enderio.machine.AversionObeliskBlockEntityMixin",
+    "enderio.machine.CrafterBlockEntityMixin",
+    "enderio.machine.DrainBlockEntityMixin",
     "enderio.machine.ImpulseHopperBlockEntityMixin",
+    "enderio.machine.PaintingMachineBlockEntityMixin",
     "enderio.machine.PoweredSpawnerBlockEntityMixin",
     "enderio.machine.SagMillBlockEntityMixin",
     "enderio.machine.SlicerBlockEntityMixin",
-    "enderio.machine.SoulBinderBlockEntityMixin"
+    "enderio.machine.SoulBinderBlockEntityMixin",
+    "enderio.machine.WiredChargerBlockEntityMixin"
   ],
   "minVersion": "${mixin_minimum_version}",
   "refmap": "${mod_id}.mixin-refmap.json"
