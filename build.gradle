@@ -176,9 +176,9 @@ def resourceTargets = ['META-INF/mods.toml', 'pack.mcmeta']
 def replaceProperties = [
         minecraft_version         : minecraft_version, minecraft_version_range: minecraft_version_range,
         forge_version             : forge_version, forge_version_range: forge_version_range,
-        loader_version_range      : loader_version_range,
-        mod_id                    : mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
-        mod_authors               : mod_authors, mod_description: mod_description,
+        loader_version_range      : loader_version_range, mixin_minimum_version: mixin_minimum_version,
+        mod_id                    : mod_id, mod_name: mod_name, mod_version: mod_version, mod_license: mod_license,
+        mod_authors               : mod_authors, mod_description: mod_description, mod_repository: mod_repository,
         enderio_version_range     : enderio_version_range,
         ironjetpacks_version_range: ironjetpacks_version_range
 ]
@@ -188,6 +188,9 @@ processResources {
     replaceProperties.put 'project', project
 
     filesMatching(resourceTargets) {
+        expand replaceProperties
+    }
+    filesMatching("${mod_id}.mixins.json") {
         expand replaceProperties
     }
 }

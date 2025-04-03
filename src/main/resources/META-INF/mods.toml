@@ -1,39 +1,39 @@
 modLoader="javafml"
 loaderVersion="${loader_version_range}"
-issueTrackerURL="https://github.com/Outlying-Destiny/Outlying-Core/issues"
+issueTrackerURL="${mod_repository}/issues"
 license="${mod_license}"
 
 [[mods]]
 modId="${mod_id}"
 version="${mod_version}"
 displayName="${mod_name}"
-displayURL="https://github.com/Outlying-Destiny/Outlying-Core"
+displayURL="${mod_repository}"
 logoFile="Outlying-Core_logo.png"
 authors="${mod_authors}"
-description="${mod_description}"
+description='''${mod_description}'''
 
-[[dependencies.outlyingcore]] 
+[[dependencies.${mod_id}]] 
     modId="forge"
     mandatory=true
     versionRange="${forge_version_range}"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.outlyingcore]]
+[[dependencies.${mod_id}]]
     modId="minecraft"
     mandatory=true
     versionRange="${minecraft_version_range}"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.outlyingcore]]
+[[dependencies.${mod_id}]]
     modId="enderio"
     mandatory=false
     versionRange="${enderio_version_range}"
     ordering="AFTER"
     side="BOTH"
 
-[[dependencies.outlyingcore]]
+[[dependencies.${mod_id}]]
     modId="ironjetpacks"
     mandatory=false
     versionRange="${ironjetpacks_version_range}"
