@@ -8,10 +8,12 @@ import net.minecraft.world.item.ItemStack;
 import java.util.HashMap;
 import java.util.Map;
 
-public class IronJetpacksMixinUtils {
+public final class IronJetpacksMixinUtils {
     private static final Map<ResourceLocation, ResourceLocation> JETPACK_TEXTURES = new HashMap<> ();
     private static final String PREFIX = "textures/models/armor/";
     private static final String SUFFIX = ".png";
+
+    private IronJetpacksMixinUtils() {}
 
     public static ResourceLocation getJetpackTexture(ItemStack stack) {
         Jetpack jetpack = JetpackUtils.getJetpack(stack);
