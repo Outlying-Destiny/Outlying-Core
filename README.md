@@ -1,12 +1,17 @@
 # Description
 A collection of tweaks for the Outlying Destiny modpack.<br/>
 <br/>
-Outlying Core features mods' tweaks and fixes for the pack, while trying to keep most things easily editable thanks to the use of resourcepacks.<br/>
+Outlying Core features mod-tweaks and fixes for the pack, while keeping most things easily editable thanks to the use of configs and resourcepacks.<br/>
 You are free to use it at your own risk.
 
-# Changes:
+# Changes
+All of the following features can be enabled/disabled or tweaked using the config files:
  - Ender IO:
-    - Changes the machines' energy usage from quadratic to linear so that machines' speed can be gated more precisely during progression (e.g. recipes' energy cost can be set in a way that machines with lower tier capacitors aren't terribly slow and with higher tier capacitors aren't incredibly fast)
-    - Changes the Octadic Capacitor base modifier value from 3 to 3.5
+    - Machines:
+       - Allows linear scaling of machines' energy capacity (instead of quadratically) based on the Capacitor's base modifier value 
+       - Allows linear scaling of machines' energy usage rate (instead of quadratically) based on the Capacitor's base modifier value
+       - These changes can be useful for gating machines more precisely during progression (e.g. if the linear energy usage rate is enabled, recipes' energy cost can be set in a way that machines with lower-tier Capacitors aren't terribly slow and with higher-tier Capacitors aren't incredibly fast)
+    - Capacitors:
+       - Adds configurable base modifier values for Capacitors
  - Iron Jetpacks:
-    - Removes the need of using tints to get different Jetpacks' models colors by injecting a different texture for each tier (path for textures: "ironjetpacks/textures/models/armor/jetpack_id.png")
+    - Allows the use of a custom texture for each Jetpack tier instead of using tints (path for each texture: ironjetpacks/textures/models/armor/jetpack_id.png)
