@@ -9,6 +9,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
+import outlyingcore.config.Config;
 import outlyingcore.util.IronJetpacksMixinUtils;
 
 @Mixin(value = JetpackRenderLayer.class, remap = false)
@@ -26,6 +27,10 @@ public class JetpackRenderLayerMixin {
                             + "Lnet/minecraft/client/model/Model;FFFLnet/minecraft/resources/ResourceLocation;)V"),
             index = 8)
     private ResourceLocation outlyingcore$modifyTexture(ResourceLocation texture, @Local(argsOnly = true) ItemStack curio) {
-        return (texture == TEXTURE ? IronJetpacksMixinUtils.getJetpackTexture(curio) : texture);
+        if (!Config.CLIENT.IRON_JETPACKS.USE_CUSTOM_JETPACK_TEXTURES.get() || texture != TEXTURE) {
+            return texture;
+        }
+
+        return IronJetpacksMixinUtils.getJetpackTexture(curio);
     }
 }
