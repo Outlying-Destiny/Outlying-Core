@@ -45,8 +45,15 @@ repositories {
     maven { // IronJetpacks & Cucumber
         url "https://maven.blakesmods.com/releases"
         content {
-        	includeGroup "com.blakebr0.ironjetpacks"
+            includeGroup "com.blakebr0.ironjetpacks"
             includeGroup "com.blakebr0.cucumber"
+        }
+    }
+
+    maven { // Curios - used for testing
+        url = "https://maven.theillusivec4.top"
+        content {
+            includeGroup "top.theillusivec4.curios"
         }
     }
 
